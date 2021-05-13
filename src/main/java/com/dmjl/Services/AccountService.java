@@ -34,4 +34,8 @@ public List<Account> getAllList(){
 public Account getById(@Param("id") Long id) {
 	return accountRepository.findById(id).get();
 }
+
+public List<Account> getAccountbyStatus(@Param("account_status") String account_status){
+	return accountRepository.findByAccount_status(account_status);
+}
 }

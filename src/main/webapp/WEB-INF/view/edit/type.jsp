@@ -36,6 +36,14 @@ PaymentAccount paymentAccount=(PaymentAccount)request.getAttribute("list");
       <label for="email">Account Type</label>
       <input type="text" class="form-control" value="<%=paymentAccount.getAccount_type() %>" id="account_type" placeholder="Account Type" name="account_type">
     </div>
+      <div class="form-group">
+      <label for="pwd">Status</label>
+      <select class="form-control" name="account_status" >
+      <option><%=paymentAccount.getAccount_status() %></option>
+      <option>In</option>
+      <option>Out</option>
+      </select>
+    </div>
     <div class="form-group">
       <label for="pwd">Account Remark</label>
       <input type=""text"" class="form-control" value="<%=paymentAccount.getAccount_remarkString() %>"  id="account_remarkString" placeholder="Account Remark" name="account_remarkString">

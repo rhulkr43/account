@@ -24,9 +24,12 @@
     <thead>
       <tr>
         <th>Sr No</th>
-        <th> Name</th>
+         <th>Status</th>
+         <th> Name</th>
         <th>Account</th>
         <th>Payment</th>
+        <th>Amount</th>
+        <th>Remark</th>
         <th>Date</th>
         <th>Edit</th>
         
@@ -37,11 +40,15 @@
     int i=1;
     %>
    <c:forEach var="list" items="${list}">
+   
     <tr>
         <td><%=i++%></td>
+        <td>${list.account_status}</td>
         <td>${list.name}</td>
         <td>${list.account_type}</td>
         <td>${list.payment_type}</td>
+          <td>Rs ${list.amount}</td>
+           <td>${list.remark}</td>
         <td>${list.date}</td>
       <td><a href="<%=request.getContextPath() %>/payment/edit/${list.id}" class="btn btn-primary">Edit</a></td>
       </tr>

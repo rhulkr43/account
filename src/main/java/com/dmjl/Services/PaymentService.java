@@ -37,5 +37,12 @@ public class PaymentService {
 		paymentRepository.deleteById(id);
 		
 	}
-
+	
+	public Payment findbYname(@Param("name") String name) {
+		return paymentRepository.getPaymentByName(name);
+	}
+	
+	public Payment findByPaymentType(@Param("payment_type") String payment_type) {
+		return paymentRepository.getPaymentAccountBypayment_type(payment_type);
+	}
 }

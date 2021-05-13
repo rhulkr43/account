@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Cache;
 
 @Entity
 public class Account {
@@ -20,6 +23,32 @@ public class Account {
 	private String remark;
 	private String amount;
 	
+	@OneToOne
+	
+	private Payment payment;
+	@OneToOne
+	private PaymentAccount paymentAccount;
+	
+	public Payment getPayment() {
+		return payment;
+	}
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+	public PaymentAccount getPaymentAccount() {
+		return paymentAccount;
+	}
+	public void setPaymentAccount(PaymentAccount paymentAccount) {
+		this.paymentAccount = paymentAccount;
+	}
+	private String account_status;
+	
+	public String getAccount_status() {
+		return account_status;
+	}
+	public void setAccount_status(String account_status) {
+		this.account_status = account_status;
+	}
 	public String getAmount() {
 		return amount;
 	}
@@ -75,6 +104,8 @@ public class Account {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+
 	
 	
 	

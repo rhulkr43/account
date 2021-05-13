@@ -36,6 +36,10 @@ Payment p=(Payment)request.getAttribute("list");
       <label for="email">Account Type</label>
       <input type="text" class="form-control" value="<%=p.getName() %>" id="name" placeholder="Account Type" name="name">
     </div>
+     <div class="form-group">
+      <label for="email">Amount</label>
+      <input type="text" class="form-control" value="<%=p.getAmount() %>" id="amount" placeholder="Account Type" name="amount">
+    </div>
     <div class="form-group">
       <label for="pwd">Account Remark</label>
       <input type=""text"" class="form-control" value="<%=p.getPayment_remarkString() %>"  id="payment_remarkString"  name="payment_remarkString">

@@ -40,4 +40,8 @@ public class PaymentAccountServices {
 		paymentAccountRepository.deleteById(id);
 	}
 	
+	public PaymentAccount getAccountByAccount(@Param("account_type") String account_type) {
+		return paymentAccountRepository.getPaymentAccountByName(account_type);
+	}
+	
 }
